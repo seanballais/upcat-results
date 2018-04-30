@@ -1,0 +1,42 @@
+body, html {
+    background: rgb(2,0,36);
+    background: linear-gradient(50deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 33%, rgba(0,212,255,1) 100%);
+    color: white;
+}
+
+header {
+    padding: 2%;
+}
+
+h1 {
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 700;
+    font-size: 5em;
+
+    text-align: center;
+}
+
+p {
+    font-family: 'Cantarell', sans-serif;
+    font-size: 1.5em;
+}
+
+.form-inline .form-group input {
+    transition: width .2s ease-in;
+    width: 450px;
+}
+
+.form-inline .form-group input:focus {
+    width: 600px;
+}
+
+div#results {
+    background-color: rgb(233, 233, 233);
+    border: solid 1px rgb(27, 27, 27);
+    border-radius: 15px;
+    color: rgb(32, 32, 32);
+    display: none;
+
+    margin-bottom: 3%;
+    padding: 1%;
+}

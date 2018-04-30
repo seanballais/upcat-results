@@ -3,6 +3,7 @@
         <title>UPCAT 2018 Results, with Search!</title>
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
             crossorigin="anonymous">
+        <link href="http://fonts.googleapis.com/css?family=Fjalla+One|Cantarell:400,400italic,700italic,700" rel="stylesheet" type="text/css"/>
         <link href="styles.css" rel="stylesheet">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
             crossorigin="anonymous"></script>
@@ -14,16 +15,29 @@
         <script src="scripts.js"></script>        
     </head>
     <body>
-        <h1>UPCAT 2018 Results, with Search!</h1>
-        
-        <form id="searchForm" class="form-inline">
-            <div class="form-group mb-2">
-                <label for="searchBar" class="sr-only">Search</label>
-                <input type="text" class="form-control" id="searchBar" placeholder="Search a name, campus, or course...">
+        <header class="container">
+            <div class="row justify-content-center align-items-center">
+                <h1>UPCAT 2018 Results with Search!</h1>
+                <p>Search the UPCAT 2018 Results with a search bar.</p>
             </div>
-            <button id="searchButton" type="button" class="btn btn-primary mb-2">Search</button>
-        </form>
-        
-        <div id="results"></div>
+        </header>
+        <article class="container">
+            <div class="row justify-content-center align-items-center">
+                <form id="searchForm" class="form-inline">
+                    <div class="form-group mb-4">
+                        <label for="searchBar" class="sr-only">Search</label>
+                        <input type="text" class="form-control" id="searchBar" placeholder="Search a name, campus, or course...">
+                    </div>
+                    <button id="searchButton" type="button" class="btn btn-primary mb-4">Search</button>
+                </form>
+            </div>
+
+            <div id="results"></div>
+        </article>
+        <footer class="container">
+            <div class="row justify-content-center align-items-center">
+                <img src="https://www.algolia.com/static_assets/images/press/downloads/search-by-algolia-white.png">
+            </div>
+        </footer>
     </body>
 </html>
