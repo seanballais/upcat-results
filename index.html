@@ -8,6 +8,8 @@
     
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
@@ -27,7 +29,10 @@
         </span>
       </header>
       <article class="block">
-        <p>Stuff</p>
+        <form id="search">
+          <input type="text" id="search-box" placeholder="Type your name&hellip;" />
+          <button type="submit" id="search-button"><i class="fa fa-search"></i></button>
+        </form>
       </article>
       <footer class="block">
         <p>This web app is <bold>not</bold> affiliated with, nor commissioned by the University of the Philippines. This is a personal project of mine built to solve one issue that has bugged me with the UPCAT results page - the lack of a search function. View the project source code <a href="https://github.com/seanballais/upcat-results/">here</a>. Code is licensed under the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
