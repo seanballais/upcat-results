@@ -1,43 +1,34 @@
-<html>
-    <head>
-        <title>UPCAT 2018 Results, with Search!</title>
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-            crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Cantarell:400,400italic,700italic,700" rel="stylesheet" type="text/css"/>
-        <link href="styles.css" rel="stylesheet">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js" integrity="sha384-lZmvU/TzxoIQIOD9yQDEpvxp6wEU32Fy0ckUgOH4EIlMOCdR823rg4+3gWRwnX1M"
-            crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-           crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearchLite.min.js"></script>
-        <script src="scripts.js"></script>        
-    </head>
-    <body>
-        <header class="container">
-            <div class="row justify-content-center align-items-center">
-                <h1>UPCAT 2018 Results with Search!</h1>
-                <p>Search the UPCAT 2018 Results with a search bar.</p>
-            </div>
-        </header>
-        <article class="container">
-            <div class="row justify-content-center align-items-center">
-                <form id="searchForm" class="form-inline">
-                    <div class="form-group mb-4">
-                        <label for="searchBar" class="sr-only">Search</label>
-                        <input type="text" class="form-control" id="searchBar" placeholder="Search a name, campus, or course...">
-                    </div>
-                    <button id="searchButton" type="button" class="btn btn-primary mb-4">Search</button>
-                </form>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Did I Pass UPCAT 2019? | Sean Ballais</title>
+    <meta name="description" content="A web app that lets you easily search for your name in the UPCAT 2019 results.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
 
-            <div id="results"></div>
-        </article>
-        <footer class="container">
-            <div class="row justify-content-center align-items-center">
-                <img src="https://www.algolia.com/static_assets/images/press/downloads/search-by-algolia-white.png">
-            </div>
-        </footer>
-    </body>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="block">
+        <h1>Did I Pass UPCAT 2019?</h1>
+        <p>Search your name using the search bar to find out if you have passed UPCAT 2019 or not.</p>
+        <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support This Project on Ko-fi', '#c22323', 'X8X4Q251');kofiwidget2.draw();</script> 
+      </header>
+      <article class="block">
+        <p>Stuff</p>
+      </article>
+      <footer class="block">
+        <p>This web app is <bold>not</bold> affiliated with, nor commissioned by the University of the Philippines. This is a personal project of mine built to solve one issue that has bugged me with the UPCAT results page - the lack of a search function.</p>
+        
+        <p>Copyright &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script><noscript>2019</noscript>, <a href="https://seanballais.github.io/">Sean Francis N. Ballais</a>. You may follow me on <a href="https://twitter.com/seanballais/">@seanballais</a>, view my project at <a href="https://github.com/seanballais/">GitHub</a>, or check out my <a href="https://seanballais.github.io/">website</a> (I blog there!).</p>
+      </footer>
+    </div>
+  </body>
 </html>
