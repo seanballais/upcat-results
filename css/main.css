@@ -146,6 +146,14 @@ header p {
   margin-top: 1%;
 }
 
+header span#kofi-button {
+  margin-right: 5px;
+}
+
+header span#twitter-button {
+  margin-left: 5px;
+}
+
 article {
   grid-column: 2;
   grid-row: 1/4;
