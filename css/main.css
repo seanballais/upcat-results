@@ -172,8 +172,7 @@ article section#search form {
   flex-direction: column;
 }
 
-article section#search form div#search-field,
-article section#search form div#categories {
+article section#search form div#search-field {
   display: flex;
   flex-direction: row;
 }
@@ -183,8 +182,7 @@ article section#search form div#search-field {
 }
 
 article section#search form div#search-field input[type=text],
-article section#search form div#search-field button,
-article section#search form div#categories div.category-type select {
+article section#search form div#search-field button {
   font-size: 1em;
   font-weight: 200;
 
@@ -219,6 +217,9 @@ article section#search form div#search-field button:hover {
 }
 
 article section#search form div#categories {
+  display: flex;
+  flex-direction: row;
+
   color: #ffffff;
 
   margin-top: 1%;
@@ -238,8 +239,12 @@ article section#search form div#categories div.category-type select {
 
   margin-top: 7px;
 
-  border: 1px solid #990000;
+  font-size: 0.75em;
+  font-weight: 200;
+
+  padding: 5px;
   border-radius: 5px;
+  float: left;
 
   transition: background-color 0.1s linear 0s
 }

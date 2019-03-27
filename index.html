@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/main.css">
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/main.js" defer></script>
   </head>
   <body>
@@ -28,7 +30,7 @@
           <a href="https://twitter.com/intent/tweet" class="twitter-share-button" data-size="large" data-text="Hey, guys! You can check the UPCAT 2019 results easily with this web app by @seanballais. #upcat2019" data-url="https://seanballais.github.io/upcat-results" data-related="seanballais,upsystem" data-show-count="false">Tweet About This Project!</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </span>
       </header>
-      <article class="block">
+      <article id="app" class="block">
         <section id="search">
           <form>
             <div id="search-field">
@@ -39,16 +41,15 @@
               <div id="courses-dropdown" class="category-type">
                 <label>Courses</label>
                 <select name="courses">
-                  <option value="0">Computer Science</option>
-                  <option value="1">Management</option>
+                  <option value="0">All Courses</option>
+                  <option v-for="course in courses" :value="course.id">{{ course.name }}</option>
                 </select>
               </div>
               <div id="campuses-dropdown" class="category-type">
                 <label>Campuses</label>
                 <select name="campuses">
-                  <!-- TODO: Modify the drop down options to look more consistent with the box. -->
-                  <option value="0">Baguio</option>
-                  <option value="1">Tacloban</option>
+                  <option value="0">All Campuses</option>
+                  <option v-for="campus in campuses" :value="campus.id">{{ campus.name }}</option>
                 </select>
               </div>
             </div>
