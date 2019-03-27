@@ -49,6 +49,7 @@ var searchBar = {
         }
     },
     template: `
+      <section id="search">
         <form>
           <div id="search-field">
             <input type="text" id="search-box" placeholder="Type your name..." @input="handleNameQuery" v-model="nameQuery" />
@@ -71,12 +72,53 @@ var searchBar = {
             </div>
           </div>
         </form>
+      </section>
+    `
+}
+
+var searchPaginator = {
+    data: function() {
+        return {
+            currPageNumber: 1,
+            numPages: 2
+        }
+    },
+    computed: {
+        shouldEnablePreviousBtn: function() {
+            return this.currPageNumber > 1;
+        },
+        shouldEnableNextBtn: function() {
+            return this.currPageNumber < this.numPages;
+        },
+        shouldDisplayBtn: function() {
+            return this.numPages > 1;
+        }
+    },
+    methods: {
+        incrementCurrPageNumber: function() {
+            this.currPageNumber = Math.max(++this.currPageNumber, this.numPages);
+        },
+        decrementCurrPageNumber: function() {
+            this.currPageNumber = Math.min(--this.currPageNumber, 1);
+        }
+    },
+    template: `
+        <section id="paginator" v-if="numPages > 0">
+          <button id="previous-btn" :disabled="!shouldEnablePreviousBtn" v-if="shouldDisplayBtn" v-on:click="decrementCurrPageNumber">
+            <i class="fas fa-caret-left"></i> Previous
+          </button>
+          <span id="paginator-btn-separator"></span>
+          <button id="next-btn" :disabled="!shouldEnableNextBtn" v-if="shouldDisplayBtn" v-on:click="incrementCurrPageNumber">
+            <i class="fas fa-caret-right"></i> Next
+          </button>
+        </section>
     `
 }
 
 var app = new Vue({
     el: 'article#app',
     components: {
-        'search-bar': searchBar
+        'search-bar': searchBar,
+        'search-paginator': searchPaginator
     }
 });

@@ -261,6 +261,51 @@ article section#search form div#categories div#campuses-dropdown {
   margin-left: 3px;
 }
 
+article section#paginator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: row;
+  flex-grow: 1;
+
+  margin-top: 3%;
+}
+
+article section#paginator button {
+  cursor: pointer;
+
+  background-image: linear-gradient(150deg, #A00224 1%, #DB4D0F 100%);
+
+  font-size: 1em;
+  font-weight: 200;
+  color: #ffffff;
+
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+
+  display: inline-block;
+
+  transition: background-image 0.1s linear 0s;
+}
+
+article section#paginator button:hover {
+  background-image: linear-gradient(150deg, #CA022D 1%, #F06428 100%);
+}
+
+article section#paginator button:disabled {
+  background-image: linear-gradient(150deg, #C98492 1%, #EFAC8F 100%);
+  cursor: default;
+}
+
+article section#paginator span#paginator-btn-separator {
+  content: "&nbsp;";
+
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
 footer {
   grid-column: 1;
   grid-row: 4;
