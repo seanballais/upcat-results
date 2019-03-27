@@ -32,28 +32,7 @@
       </header>
       <article id="app" class="block">
         <section id="search">
-          <form>
-            <div id="search-field">
-              <input type="text" id="search-box" placeholder="Type your name&hellip;" />
-              <button type="submit" id="search-button"><i class="fa fa-search"></i></button>
-            </div>
-            <div id="categories">
-              <div id="courses-dropdown" class="category-type">
-                <label>Courses</label>
-                <select name="courses">
-                  <option value="0">All Courses</option>
-                  <option v-for="course in courses" :value="course.id">{{ course.name }}</option>
-                </select>
-              </div>
-              <div id="campuses-dropdown" class="category-type">
-                <label>Campuses</label>
-                <select name="campuses">
-                  <option value="0">All Campuses</option>
-                  <option v-for="campus in campuses" :value="campus.id">{{ campus.name }}</option>
-                </select>
-              </div>
-            </div>
-          </form>
+          <search-bar></search-bar>
         </section>
       </article>
       <footer class="block">
